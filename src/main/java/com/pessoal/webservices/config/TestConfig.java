@@ -10,10 +10,12 @@ import org.springframework.context.annotation.Profile;
 
 import com.pessoal.webservices.entities.Category;
 import com.pessoal.webservices.entities.Order;
+import com.pessoal.webservices.entities.OrderItem;
 import com.pessoal.webservices.entities.Product;
 import com.pessoal.webservices.entities.User;
 import com.pessoal.webservices.entities.enums.OrderStatus;
 import com.pessoal.webservices.repositories.CategoryRepository;
+import com.pessoal.webservices.repositories.OrderItemRepository;
 import com.pessoal.webservices.repositories.OrderRepository;
 import com.pessoal.webservices.repositories.ProductRepository;
 import com.pessoal.webservices.repositories.UserRepository;
@@ -29,6 +31,8 @@ public class TestConfig implements CommandLineRunner {
 	private OrderRepository orderRepository;
 	@Autowired
 	private CategoryRepository categoryRepository;
+	@Autowired
+	private OrderItemRepository orderItemRepository;
 
     TestConfig(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -67,6 +71,12 @@ public class TestConfig implements CommandLineRunner {
 		Order o3 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"), OrderStatus.WAITING_PAYMENT, u1);
 		orderRepository.saveAll(Arrays.asList(o1, o2, o3));
 		
+		OrderItem oi1 = new OrderItem(o1, p1, 2, p1.getPrice());
+		OrderItem oi2 = new OrderItem(o1, p3, 1, p3.getPrice());
+		OrderItem oi3 = new OrderItem(o2, p3, 2, p3.getPrice());
+		OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice());
+		
+	    orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
 	
 	}
 
