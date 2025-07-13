@@ -22,7 +22,7 @@ import com.pessoal.webservices.repositories.ProductRepository;
 import com.pessoal.webservices.repositories.UserRepository;
 
 @Configuration
-@Profile("test")
+@Profile("dev")
 public class TestConfig implements CommandLineRunner {
 
     private final ProductRepository productRepository;
