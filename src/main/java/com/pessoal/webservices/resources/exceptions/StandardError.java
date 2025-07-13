@@ -1,4 +1,4 @@
-package com.pessoal.webservices.resources.excptions;
+package com.pessoal.webservices.resources.exceptions;
 
 import java.io.Serializable;
 import java.time.Instant;
