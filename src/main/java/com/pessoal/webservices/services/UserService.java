@@ -13,6 +13,8 @@ import com.pessoal.webservices.repositories.UserRepository;
 import com.pessoal.webservices.services.exceptions.DatabaseException;
 import com.pessoal.webservices.services.exceptions.ResourceNotFoundException;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class UserService {
 
@@ -51,9 +53,14 @@ public class UserService {
 	}
 
 	public User update(Long id, User obj) {
-		User user = userRepository.getReferenceById(id);
-		upDateData(user, obj);
-		return userRepository.save(user);
+		try {
+			User user = userRepository.getReferenceById(id);
+			upDateData(user, obj);
+			return userRepository.save(user);
+		}
+		catch(EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
+		}
 	}
 
 	private void upDateData(User user, User obj) {
