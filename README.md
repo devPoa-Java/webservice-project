@@ -7,7 +7,7 @@ Consiste em um webservice de pedidos, onde implementamos um conceito relacional.
 Outras entitidas e relacionamentos serão inseridas via seeding(arquivo **TestConfig**).
 Também incluimos a dependencia de springdoc para estar gerando o swagger local dos endpoint. 
 
-Para o deploy no Render, tivemos que usar o arquivo de "Dockerfile" para gerar uma imagem Ubunto para estar utilizando o Java. O plano gratuíto, somente aceita o java com docker.
+Para o deploy no Render, tivemos que usar o arquivo de "Dockerfile" para gerar uma imagem Ubuntu para estar utilizando o Java. O plano gratuíto, somente aceita o java com docker.
 
 ## Modelo conceitual
 ![Modelo conceitual](https://github.com/devPoa-Java/webservice-project/blob/main/Captura%20de%20tela%202025-07-14%20115705.png)
