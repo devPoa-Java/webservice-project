@@ -1,15 +1,16 @@
 # Webservice - Pedidos
 
-## Sobre o projeto !!!
+## Sobre o projeto 
 
 Consiste em um webservice de pedidos, onde implementamos um conceito relacional. Criamos endpoint para Criar, Alterar, excluir e pesquisar usuários. 
-As outras entitidas e relacionamentos serão inseridas via seeding(arquivo TestConfig).
+Outras entitidas e relacionamentos serão inseridas via seeding(arquivo TestConfig).
+Também incluimos a dependencia de springdoc para estar gerando o swagger local dos endpoint. 
 
-## Modelo conceitual:
+## Modelo conceitual
+![Modelo conceitual](https://github.com/devPoa-Java/webservice-project/blob/main/Captura%20de%20tela%202025-07-14%20115705.png)
 
-<a href="https://instagram.com/sandromdsantos" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-<a href="https://www.linkedin.com/in/sandro-dos-santos-42083a26" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-
+## Modelo Swagger
+![swagger]
 
 ## Tecnologias utilizadas
 
@@ -21,3 +22,7 @@ As outras entitidas e relacionamentos serão inseridas via seeding(arquivo TestC
 
 ## Implantação em produção
 - Backend e banco de dados Postgres: Render
+
+## Autor 
+Sandro M. dos Santos\
+<img src="https://img.shields.io/badge/in-4682b4" target="_blank"> https://www.linkedin.com/in/sandromdossantos/
